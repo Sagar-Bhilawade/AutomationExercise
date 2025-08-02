@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationExerciseTestSuite" parallel="classes" thread-count="3">
+    
+    <parameter name="browser" value="chrome"/>
+    
+    <test name="SmokeTests" priority="1">
+        <classes>
+            <class name="com.sagar.automation.tests.LoginTests">
+                <methods>
+                    <include name="LoginWithValidUsernameAndPassword"/>
+                </methods>
+            </class>
+            <class name="com.sagar.automation.tests.NavigationTests">
+                <methods>
+                    <include name="HeaderNavigationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="FunctionalTests" priority="2">
+        <classes>
+            <class name="com.sagar.automation.tests.LoginTests"/>
+            <class name="com.sagar.automation.tests.RegisterUserTests"/>
+            <class name="com.sagar.automation.tests.ProductTests"/>
+            <class name="com.sagar.automation.tests.ContactUsTests"/>
+        </classes>
+    </test>
+    
+    <test name="APITests" priority="3">
+        <classes>
+            <class name="com.sagar.automation.tests.api.ApiTests"/>
+        </classes>
+    </test>
+    
+    <test name="NegativeTests" priority="4">
+        <classes>
+            <class name="com.sagar.automation.tests.NegativeTests"/>
+        </classes>
+    </test>
+    
+    <test name="RegressionTests" priority="5">
+        <classes>
+            <class name="com.sagar.automation.tests.LoginTests"/>
+            <class name="com.sagar.automation.tests.RegisterUserTests"/>
+            <class name="com.sagar.automation.tests.ProductTests"/>
+            <class name="com.sagar.automation.tests.ContactUsTests"/>
+            <class name="com.sagar.automation.tests.NavigationTests"/>
+            <class name="com.sagar.automation.tests.NegativeTests"/>
+        </classes>
+    </test>
+    
+</suite>

@@ -1,0 +1,16 @@
+This would be an Excel file with enhanced test data including:
+
+TestParameters Sheet:
+- LoginWithValidUsernameAndPassword: EMAIL, PASSWORD, ExpectedUsername
+- LoginWithInvalidCredentials: EMAIL, PASSWORD, ExpectedErrorMessage
+- RegisterUserTest: NAME, EMAIL, PASSWORD, TITLE, DAY, MONTH, YEAR, FIRST_NAME, LAST_NAME, COMPANY, ADDRESS1, ADDRESS2, COUNTRY, STATE, CITY, ZIPCODE, MOBILE_NUMBER, ExpectedLoggedInUsername, ExpectedAccountCreatedMsg, ExpectedAccountDeletedMsg
+- ViewAllProductsTest: ExpectedProductsPageTitle
+- SearchProductTest: SearchKeyword, ExpectedResultsText
+- AddProductToCartTest: ProductIndex, ExpectedQuantity
+- ContactUsFormSubmissionTest: NAME, EMAIL, SUBJECT, MESSAGE, ExpectedSuccessMessage
+- ContactUsFormValidationTest: ExpectedValidationMessage
+- SqlInjectionLoginTest: EMAIL, PASSWORD, ExpectedErrorMessage
+- DuplicateEmailRegistrationTest: EMAIL, NAME, ExpectedErrorMessage
+- XssAttackTest: XSS_SCRIPT, NAME
+
+TestData Sheet would contain corresponding test data rows for each test method.
